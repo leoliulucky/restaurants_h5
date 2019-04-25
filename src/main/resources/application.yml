@@ -1,0 +1,37 @@
+spring:
+#  datasource:
+#    name: mgmt
+#    type: com.alibaba.druid.pool.DruidDataSource
+#    druid:
+#      filters: stat
+#      driver-class-name: com.mysql.jdbc.Driver
+#      url: jdbc:mysql://192.168.56.250:3306/mgmt?useUnicode=true&characterEncoding=utf-8&useSSL=true
+#      username: root
+#      password: liupoyang
+#      initial-size: 1
+#      min-idle: 1
+#      max-active: 20
+#      max-wait: 60000
+#      time-between-eviction-runs-millis: 60000
+#      min-evictable-idle-time-millis: 300000
+#      validation-query: SELECT 'x'
+#      test-while-idle: true
+#      test-on-borrow: false
+#      test-on-return: false
+#      pool-prepared-statements: false
+#      max-pool-prepared-statement-per-connection-size: 20
+#  mvc:
+#    view:
+#      prefix: /
+#      suffix: .html
+  freemarker:
+    suffix: .ftl
+    template-loader-path: classpath:/templates
+#mybatis:
+##  mapper-locations: classpath:mapper/*.xml
+#  type-aliases-package: com.benxiaopao.provider.dao.model
+#pagehelper:
+#  helper-dialect: mysql
+#  reasonable: true
+#  support-methods-arguments: true
+#  params: count==countSql
