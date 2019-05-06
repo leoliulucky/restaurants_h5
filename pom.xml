@@ -77,6 +77,43 @@
             <artifactId>pagehelper-spring-boot-starter</artifactId>
             <version>1.2.5</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.benxiaopao</groupId>
+            <artifactId>restaurants-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/restaurants-common-1.0-SNAPSHOT.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov-jdk15on</artifactId>
+            <version>1.60</version>
+        </dependency>
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov-ext-jdk15on</artifactId>
+            <version>1.60</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.8</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.cage</groupId>
+            <artifactId>cage</artifactId>
+            <version>1.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.57</version>
+        </dependency>
     </dependencies>
 
     <build>
