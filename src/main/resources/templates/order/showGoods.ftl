@@ -11,16 +11,6 @@
 <body>
 <#assign backUrl = '/global/index'>
 <#include "../inc/header.ftl">
-<#--<header data-am-widget="header" class="am-header am-header-default sq-head ">-->
-    <#--<div class="am-header-left am-header-nav">-->
-        <#--<a href="javascript:history.back()" class="" style="border: 0;">-->
-            <#--<i class="am-icon-chevron-left"></i>-->
-        <#--</a>-->
-    <#--</div>-->
-    <#--<h1 class="am-header-title" >-->
-        <#--<a href="" class="" style="color: #333;">登录</a>-->
-    <#--</h1>-->
-<#--</header>-->
 <div style="height: 49px;"></div>
 <ul class="contact">
     <#list data.productVOList as productVO>

@@ -1,12 +1,8 @@
 package com.benxiaopao.mobile.order.controller;
 
-import com.benxiaopao.common.supers.BaseConstant;
 import com.benxiaopao.common.supers.BaseController;
-import com.benxiaopao.common.util.RSAUtil;
-import com.benxiaopao.common.util.ThreadContent;
 import com.benxiaopao.common.util.ViewResult;
 import com.benxiaopao.mobile.common.aspect.IncludeAuthorize;
-import com.benxiaopao.mobile.common.constant.UserConstant;
 import com.benxiaopao.mobile.order.service.OrderService;
 import com.benxiaopao.mobile.product.vo.ProductVO;
 import com.google.common.base.Preconditions;
@@ -16,12 +12,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
-
-import java.security.interfaces.RSAPublicKey;
-import java.util.AbstractMap;
 import java.util.List;
 import java.util.Map;
-import java.util.regex.Pattern;
 
 /**
  * 订单模块请求控制层

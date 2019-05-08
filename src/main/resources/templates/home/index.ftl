@@ -10,19 +10,6 @@
 </head>
 <body>
 <#include "../inc/header.ftl">
-<#--<header data-am-widget="header" class="am-header am-header-default sq-head" style="background: #39b867">-->
-    <#--<div class="am-header-right am-header-nav">-->
-        <#--<button type="button" class="am-btn am-btn-warning" id="doc-confirm-toggle" style="background: none; border: 0; font-size: 24px;">-->
-            <#--&lt;#&ndash;<i class="am-header-icon am-icon-trash"></i>&ndash;&gt;-->
-            <#--<#if userObj??>-->
-                <#--${userObj.nickName}-->
-            <#--<#else>-->
-                <#--<a href="/user/register" style="color:white;font-size: 12px;">注册</a>-->
-				<#--<a href="/user/login" style="color:white;font-size: 12px;">登录</a>-->
-            <#--</#if>-->
-        <#--</button>-->
-    <#--</div>-->
-<#--</header>-->
 <div class="content-list" id="outer">
     <div class="list-left" id="tab" style="top:50px;">
         <ul>
@@ -37,9 +24,10 @@
                 <li>
                     <a href="detail.html"><img src="${vo.icon}" class="list-pic" /></a>
                     <div class="shop-list-mid">
-                        <div class="tit"><a href="/restaurant/detail?i=${vo.restaurantId}" style="font-size:17px;color:#333;">${vo.restaurantName}</a></div>
-                        <div class="tit"><a href="/restaurant/detail?i=${vo.restaurantId}">[${vo.address}] ${vo.tel}</a></div>
-                        <div class="am-gallery-desc">${vo.tags}</div>
+                        <div class="tit"><a href="/restaurant/detail?i=${vo.restaurantId}" style="font-size:17px;font-weight:700;color:#333;">${vo.restaurantName}</a></div>
+                        <div class="tit"><a href="/restaurant/detail?i=${vo.restaurantId}">[${vo.address}]</a></div>
+                        <div class="tit"><a href="/restaurant/detail?i=${vo.restaurantId}">${vo.tel}</a></div>
+                        <div class="am-gallery-desc" style="font-size: 1.4rem">${vo.tags}</div>
                     </div>
                     <div class="list-cart">
                         <div class="d-stock ">

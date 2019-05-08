@@ -34,9 +34,7 @@
 <button class="paybtn" type="button" onclick="return register();">注册</button>
 <div style="padding:30px;">
     已有账号，<a href="/user/inputMobile4ResetPwd.do">登录</a>
-    <#--<a href="/user/inputMobile4ResetPwd.do" style="float:right">忘记密码</a>-->
 </div>
-<#--<input type="hidden" id="path" name="path" value="${data.path!}" />-->
 </body>
 <script type="text/javascript">
 function register() {

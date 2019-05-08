@@ -2,8 +2,6 @@ package com.benxiaopao.mobile.restaurant.controller;
 
 import com.benxiaopao.common.supers.BaseController;
 import com.benxiaopao.common.util.ViewResult;
-import com.benxiaopao.mobile.common.constant.GlobalConstant;
-import com.benxiaopao.mobile.global.service.GlobalService;
 import com.benxiaopao.mobile.restaurant.service.RestaurantService;
 import com.google.common.base.Preconditions;
 import lombok.extern.slf4j.Slf4j;

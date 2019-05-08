@@ -6,7 +6,6 @@ import com.alibaba.fastjson.JSONObject;
 import com.benxiaopao.common.exception.BizException;
 import com.benxiaopao.common.supers.BaseService;
 import com.benxiaopao.common.util.HttpClientUtil;
-import com.benxiaopao.common.util.Pagination;
 import com.benxiaopao.mobile.common.constant.GlobalConstant;
 import com.benxiaopao.mobile.product.vo.ProductCategoryVO;
 import com.benxiaopao.mobile.product.vo.ProductVO;

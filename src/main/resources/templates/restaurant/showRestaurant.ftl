@@ -64,31 +64,6 @@
     <a href="javascript:;" class="list-jsk" onclick="return chooseDone();">选好了</a>
 </div>
 
-<#--<div class="am-modal am-modal-confirm" tabindex="-1" id="my-confirm">-->
-    <#--<div class="am-modal-dialog">-->
-        <#--<div class="am-modal-bd" style="height: 80px; line-height: 80px;">  您确定要清空饮品吗？</div>-->
-        <#--<div class="am-modal-footer">-->
-            <#--<span class="am-modal-btn" data-am-modal-cancel>取消</span>-->
-            <#--<span class="am-modal-btn" data-am-modal-confirm>确定</span>-->
-        <#--</div>-->
-    <#--</div>-->
-<#--</div>-->
-
-<#--<div class="am-modal am-modal-confirm" tabindex="-1" id="login-confirm">-->
-    <#--<div class="am-modal-dialog">-->
-        <#--<div class="am-modal-bd" style="height: 130px;">-->
-            <#--<ul class="contact">-->
-                <#--<li><input type="text" id="account" placeholder="手机/用户名/邮箱"/></li>-->
-                <#--<li><input type="password" id="password" placeholder="请输入密码" maxlength="16"/></li>-->
-            <#--</ul>-->
-        <#--</div>-->
-        <#--<div class="am-modal-footer">-->
-            <#--<span class="am-modal-btn" data-am-modal-cancel>取消</span>-->
-            <#--<span class="am-modal-btn" data-am-modal-confirm>确定</span>-->
-        <#--</div>-->
-    <#--</div>-->
-<#--</div>-->
-
 <div class="am-modal am-modal-confirm" tabindex="-1" id="login-confirm">
     <div class="am-modal-dialog">
         <div class="am-modal-bd" style="height: 80px; line-height: 80px;">  您还没有登录，请先登录后再操作：）</div>
@@ -175,19 +150,6 @@ $(function(){
         $li.eq(0).click();
     }
 
-
-//         $('#login-confirm').modal({
-//             relatedTarget: this,
-//             onConfirm: function(options) {
-//                 var $link = $(this.relatedTarget).prev('a');
-//                 var msg = $link.length ? '你要删除的饮品 为 ' + $link.data('id') :
-//                         '确定了';
-// //        alert(msg);
-//             },
-//             onCancel: function() {
-//                 alert('不删除');
-//             }
-//         });
     _$showStat = $("#showStat");
 });
 
@@ -204,9 +166,6 @@ function checkLogin(){
         $('#login-confirm').modal({
             relatedTarget: this,
             onConfirm: function(options) {
-                // var $link = $(this.relatedTarget).prev('a');
-                // var msg = $link.length ? '你要删除的饮品 为 ' + $link.data('id') :
-                //         '确定了';
                 // alert('确定了');
                 window.location.href = "/user/login";
             },
