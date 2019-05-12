@@ -90,7 +90,7 @@ $(function(){
         self.siblings('input').val(current_num);
         // update_item(self.siblings('input').data('item-id'));
 
-        var pid = self.attr("data");
+        var pid = self.attr("data") + "";
         updateCart(pid, current_num);
     });
     $('.decrease').click(function(){
@@ -107,7 +107,7 @@ $(function(){
             self.siblings('input').val(current_num);
             // update_item(self.siblings('input').data('item-id'));
 
-            var pid = self.attr("data");
+            var pid = self.attr("data") + "";
             updateCart(pid, current_num);
         }
     });
@@ -237,7 +237,7 @@ function chooseDone(){
         }
     }
     _pid = _pid.substring(0, _pid.length - 1);
-    _num = _pid.substring(0, _num.length - 1);
+    _num = _num.substring(0, _num.length - 1);
     if(_pid == ""){
         alert("您还没有选餐，请选择后再提交");
         return false;

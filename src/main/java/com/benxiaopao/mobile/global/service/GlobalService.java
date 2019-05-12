@@ -7,14 +7,14 @@ import com.benxiaopao.common.exception.BizException;
 import com.benxiaopao.common.supers.BaseService;
 import com.benxiaopao.common.util.HttpClientUtil;
 import com.benxiaopao.common.util.Pagination;
-import com.benxiaopao.common.util.ViewResult;
 import com.benxiaopao.mobile.common.constant.GlobalConstant;
 import com.benxiaopao.mobile.restaurant.vo.RestaurantVO;
+import com.benxiaopao.mobile.user.vo.UserVO;
 import com.google.common.base.Function;
 import com.google.common.collect.FluentIterable;
+import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -36,10 +36,12 @@ public class GlobalService extends BaseService {
         Map<String, Object> result = new HashMap<String, Object>();
 
         Pagination pagination = Pagination.currentPagination(pageNum, pageSize);
+        UserVO user = (UserVO) currentUser();
 
         Map<String, Object> params = Maps.newHashMap();
         params.put("pageNum", 1);
         params.put("pageSize", 10);
+        params.put("userId", user == null? 0 : user.getUserId());
         String response = HttpClientUtil.doPost(GlobalConstant.API_URL + "/api/restaurant/list", params);
         log.info("# restaurant list response = {}", response);
         JSONObject responseObj = JSON.parseObject(response);
@@ -70,6 +72,15 @@ public class GlobalService extends BaseService {
         }).toList();
 
         result.put("restaurantVOList", restaurantVOList);
+
+        JSONArray recommendDataArray = JSON.parseArray(dataObj.get("recommendDataList").toString());
+        if(recommendDataArray != null && recommendDataArray.size() > 0){
+            List<String> recommendDataList = Lists.newArrayList();
+            for(int i = 0; i < recommendDataArray.size(); i++){
+                recommendDataList.add(recommendDataArray.get(i).toString());
+            }
+            result.put("recommendDataList", recommendDataList);
+        }
 
         return result;
     }

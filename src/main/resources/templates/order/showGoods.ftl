@@ -14,7 +14,7 @@
 <div style="height: 49px;"></div>
 <ul class="contact">
     <#list data.productVOList as productVO>
-        <li>
+        <li style="height: 110px">
             <a href="javascript:;"><img src="${productVO.icon}" class="list-pic" /></a>
             <div class="shop-list-mid" style="float:none;">
                 <div class="tit"><a href="javascript:;">&nbsp;&nbsp;${productVO.productName}</a></div>

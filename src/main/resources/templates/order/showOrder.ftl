@@ -19,7 +19,7 @@
     <li><button class="paybtn" type="button" onclick="return payOrder();">立即支付</button></li>
     <br>
     <#list data.orderMap.orderItemVOList as orderItemVO>
-        <li>
+        <li style="height: 110px">
             <a href="javascript:;"><img src="${orderItemVO.productIcon}" class="list-pic" /></a>
             <div class="shop-list-mid" style="float:none;">
                 <div class="tit"><a href="javascript:;">&nbsp;&nbsp;${orderItemVO.productName}</a></div>

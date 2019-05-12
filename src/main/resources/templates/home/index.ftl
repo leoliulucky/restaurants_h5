@@ -14,7 +14,9 @@
     <div class="list-left" id="tab" style="top:50px;">
         <ul>
             <li class="current"><a style="position: relative;">餐馆列表</li>
-            <li><a>餐馆推荐</a></li>
+            <#if data.home.recommendDataList??>
+                <li><a>好菜推荐</a></li>
+            </#if>
         </ul>
     </div>
     <div class="list-right" id="content">
@@ -42,20 +44,25 @@
             </li>
         </ul>
 
-        <ul class="list-pro">
-            <li>
-                <a href="detail.html"><img src="/images/1.png" class="list-pic" /></a>
-                <div class="shop-list-mid">
-                    <div class="tit"><a href="detail.html">法国加力果12个装 进口新鲜水果 嘎啦苹果 包邮</a></div>
-                    <div class="am-gallery-desc">￥52</div>
-                </div>
-                <div class="list-cart">
-                    <div class="d-stock ">
-                        <a class="increase" style="width:2em;">点餐</a>
-                    </div>
-                </div>
-            </li>
-        </ul>
+        <#if data.home.recommendDataList??>
+            <ul class="list-pro">
+                <#list data.home.recommendDataList as productName>
+                    <li>
+                        <#--<a href="detail.html"><img src="/images/1.png" class="list-pic" /></a>-->
+                        <div class="shop-list-mid">
+                            <div class="am-gallery-desc">${productName}</div>
+                            <#--<div class="am-gallery-desc">￥52</div>-->
+                        </div>
+                        <#--<div class="list-cart">-->
+                            <#--<div class="d-stock ">-->
+                                <#--<a class="increase" style="width:2em;">点餐</a>-->
+                            <#--</div>-->
+                        <#--</div>-->
+                    </li>
+                </#list>
+            </ul>
+        </#if>
+
     </div>
 </div>
 
